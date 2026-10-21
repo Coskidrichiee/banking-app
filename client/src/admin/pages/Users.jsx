@@ -57,7 +57,7 @@ function Users() {
 
             const response =
                 await axios.get(
-                    "http://localhost:5000/api/admin/users"
+                    "https://banking-app-zlqr.onrender.com/api/admin/users"
                 );
 
 
@@ -108,7 +108,7 @@ function Users() {
 
 
             await axios.delete(
-                `http://localhost:5000/api/admin/users/${id}`
+                `https://banking-app-zlqr.onrender.com/api/admin/users/${id}`
             );
 
 

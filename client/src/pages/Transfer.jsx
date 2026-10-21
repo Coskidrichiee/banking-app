@@ -651,7 +651,7 @@ return (
 
                         <img
                             src={
-                                `http://localhost:5000/uploads/profiles/${user.profile_picture}`
+                                `https://banking-app-zlqr.onrender.com/uploads/profiles/${user.profile_picture}`
                             }
                             alt="profile"
                         />

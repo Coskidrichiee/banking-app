@@ -42,7 +42,7 @@ function UserDetails() {
     const [processing, setProcessing] = useState(false);
 
     const API =
-        "http://localhost:5000/api/admin/users";
+        "https://banking-app-zlqr.onrender.com/api/admin/users";
 
     useEffect(() => {
 
@@ -356,7 +356,7 @@ function UserDetails() {
                         <img
 
                             src={
-                                `http://localhost:5000${user.profile_picture}`
+                                `https://banking-app-zlqr.onrender.com${user.profile_picture}`
                             }
 
                             alt={

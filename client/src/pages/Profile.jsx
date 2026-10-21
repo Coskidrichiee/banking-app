@@ -384,7 +384,7 @@ function Profile() {
 
                         {user?.profile_picture ? (
                             <img
-                                src={`http://localhost:5000/uploads/profiles/${user.profile_picture}`}
+                                src={`https://banking-app-zlqr.onrender.com/uploads/profiles/${user.profile_picture}`}
                                 alt={user.full_name}
                                 className="profile-avatar-image"
                             />

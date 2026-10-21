@@ -183,7 +183,7 @@ function AddUser() {
 
             await axios.post(
 
-                "http://localhost:5000/api/admin/users",
+                "https://banking-app-zlqr.onrender.com/api/admin/users",
 
                 data,
 
