@@ -1,0 +1,249 @@
+/* =========================================
+   ROOT VARIABLES
+========================================= */
+
+:root{
+
+    /* Brand */
+
+    --primary:#0b2e6b;
+    --primary-light:#1d4f9d;
+    --primary-dark:#071f49;
+
+    /* Status */
+
+    --success:#16a34a;
+    --success-bg:#ecfdf3;
+
+    --warning:#f59e0b;
+    --warning-bg:#fff8e6;
+
+    --danger:#dc2626;
+    --danger-bg:#fef2f2;
+
+    --info:#2563eb;
+    --info-bg:#eff6ff;
+
+    /* Background */
+
+    --background:#f5f7fb;
+    --card:#ffffff;
+    --sidebar:#ffffff;
+    --header:#ffffff;
+
+    /* Text */
+
+    --text:#172033;
+    --text-secondary:#6b7280;
+    --text-light:#9ca3af;
+
+    /* Border */
+
+    --border:#e5e7eb;
+
+    /* Shadow */
+
+    --shadow-sm:0 2px 8px rgba(15,23,42,.05);
+    --shadow-md:0 8px 24px rgba(15,23,42,.08);
+    --shadow-lg:0 14px 35px rgba(15,23,42,.12);
+
+    /* Radius */
+
+    --radius-sm:10px;
+    --radius-md:16px;
+    --radius-lg:24px;
+
+    /* Transition */
+
+    --transition:.3s ease;
+}
+/* =========================================
+   ADMIN LAYOUT
+========================================= */
+
+.admin-layout{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.admin-main{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:100vh;
+}
+
+/* =========================================
+   PAGE CONTENT
+========================================= */
+
+.admin-content{
+
+    flex:1;
+
+    padding:30px;
+
+    background:var(--background);
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+/* =========================================
+   ADMIN GRID
+========================================= */
+
+.admin-dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+/* =========================================
+   GLOBAL CARD
+========================================= */
+
+.admin-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-md);
+
+    box-shadow:var(--shadow-sm);
+
+    padding:24px;
+
+    transition:var(--transition);
+}
+
+.admin-card:hover{
+
+    box-shadow:var(--shadow-md);
+
+    transform:translateY(-2px);
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.admin-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:var(--radius-sm);
+
+    background:var(--primary);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+}
+
+.admin-btn:hover{
+
+    background:var(--primary-light);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:992px){
+
+    .dashboard-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .admin-content{
+
+        padding:20px;
+    }
+
+}
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+    .admin-layout{
+
+        flex-direction:column;
+    }
+
+    .dashboard-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .admin-content{
+
+        padding:16px;
+    }
+
+}
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+    .admin-content{
+
+        padding:12px;
+    }
+
+    .admin-card{
+
+        padding:18px;
+    }
+
+}

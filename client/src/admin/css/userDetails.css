@@ -1,0 +1,772 @@
+/* =========================================
+   USER DETAILS MODERN UI
+========================================= */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+.user-details-page{
+
+    min-height:100vh;
+
+    padding:30px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #eef3ff,
+        #f8fbff
+    );
+
+    font-family:
+    "Inter",
+    "Segoe UI",
+    sans-serif;
+
+}
+
+
+
+/* HEADER */
+
+.user-details-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.user-details-header h2{
+
+    font-size:30px;
+
+    color:#1e293b;
+
+}
+
+
+
+
+
+.back-btn{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.back-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 25px
+    rgba(37,99,235,.3);
+
+}
+
+
+
+
+
+
+/* HERO */
+
+
+.profile-hero{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+
+    padding:35px;
+
+
+    border-radius:25px;
+
+
+    background:
+
+    rgba(255,255,255,.7);
+
+
+    backdrop-filter:
+    blur(15px);
+
+
+    box-shadow:
+
+    0 20px 40px
+    rgba(0,0,0,.08);
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+.profile-image img,
+.default-avatar{
+
+
+    width:160px;
+
+    height:160px;
+
+
+    border-radius:50%;
+
+
+    object-fit:cover;
+
+
+    border:
+
+    6px solid #2563eb;
+
+
+}
+
+
+
+.default-avatar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:70px;
+
+    background:#e2e8f0;
+
+    color:#64748b;
+
+}
+
+
+
+
+.profile-content{
+
+    flex:1;
+
+}
+
+
+
+.profile-content h1{
+
+
+    font-size:32px;
+
+    color:#0f172a;
+
+}
+
+
+
+.account-number{
+
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+    margin:10px 0;
+
+    color:#64748b;
+
+}
+
+
+
+
+
+.status{
+
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-weight:600;
+
+    text-transform:capitalize;
+
+}
+
+
+
+.status.active{
+
+    background:#16a34a;
+
+}
+
+
+
+.status.blocked{
+
+    background:#dc2626;
+
+}
+
+
+
+.status.pending{
+
+    background:#f59e0b;
+
+}
+
+
+
+
+
+
+
+
+/* ACTION BUTTONS */
+
+
+.profile-actions{
+
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+
+}
+
+
+
+.profile-actions button{
+
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    color:white;
+
+    display:flex;
+
+    gap:8px;
+
+    align-items:center;
+
+    transition:.3s;
+
+}
+
+
+
+.profile-actions button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+.edit-btn{
+
+    background:#2563eb;
+
+}
+
+
+
+.block-btn{
+
+    background:#dc2626;
+
+}
+
+
+
+.unblock-btn{
+
+    background:#16a34a;
+
+}
+
+
+
+.delete-btn{
+
+    background:#111827;
+
+}
+
+
+
+
+
+
+
+/* DETAILS */
+
+
+.details-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(280px,1fr)
+    );
+
+
+    gap:20px;
+
+
+}
+
+
+
+.detail-card{
+
+
+    background:white;
+
+
+    padding:25px;
+
+
+    border-radius:20px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+
+    box-shadow:
+
+    0 10px 25px
+    rgba(0,0,0,.06);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.detail-card:hover{
+
+
+    transform:translateY(-8px);
+
+
+}
+
+
+
+
+.detail-icon{
+
+
+    width:55px;
+
+    height:55px;
+
+
+    border-radius:15px;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #60a5fa
+    );
+
+
+    color:white;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    font-size:22px;
+
+
+}
+
+
+
+.detail-content span,
+.account-grid span{
+
+
+    color:#64748b;
+
+    font-size:14px;
+
+
+}
+
+
+.detail-content h4{
+
+
+    margin-top:5px;
+
+    color:#0f172a;
+
+}
+
+
+
+
+
+
+
+
+/* BALANCE */
+
+
+.balance-card{
+
+
+    margin-top:30px;
+
+
+    padding:35px;
+
+
+    border-radius:25px;
+
+
+    color:white;
+
+
+    background:
+
+
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #1e40af
+    );
+
+
+    box-shadow:
+
+    0 20px 40px
+    rgba(37,99,235,.35);
+
+
+}
+
+
+
+.balance-card h1{
+
+
+    font-size:45px;
+
+    margin-top:15px;
+
+
+}
+
+
+
+
+
+
+
+/* SECTION */
+
+
+.section-card{
+
+
+    margin-top:30px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 15px 35px
+    rgba(0,0,0,.08);
+
+
+}
+
+
+
+.section-title{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+    color:#2563eb;
+
+
+}
+
+
+
+
+.account-grid{
+
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(220px,1fr)
+    );
+
+    gap:20px;
+
+}
+
+
+
+.account-grid div{
+
+
+    padding:20px;
+
+    background:#f8fafc;
+
+    border-radius:15px;
+
+
+}
+
+
+
+.account-grid strong{
+
+
+    display:block;
+
+    margin-top:8px;
+
+
+}
+
+
+
+
+
+
+
+/* TIMELINE */
+
+
+.timeline{
+
+    position:relative;
+
+    padding-left:30px;
+
+}
+
+
+
+.timeline-item{
+
+
+    position:relative;
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.timeline-dot{
+
+
+    position:absolute;
+
+    left:-38px;
+
+    top:5px;
+
+
+    width:15px;
+
+    height:15px;
+
+
+    background:#2563eb;
+
+    border-radius:50%;
+
+
+}
+
+
+
+.timeline-item h4{
+
+
+    color:#0f172a;
+
+
+}
+
+
+.timeline-item p{
+
+
+    color:#64748b;
+
+}
+
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:768px){
+
+
+.user-details-page{
+
+    padding:15px;
+
+}
+
+
+
+.user-details-header{
+
+
+    flex-direction:column;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+}
+
+
+
+.profile-hero{
+
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+
+.profile-actions{
+
+
+    justify-content:center;
+
+}
+
+
+
+.profile-content h1{
+
+
+    font-size:25px;
+
+}
+
+
+
+.balance-card h1{
+
+
+    font-size:32px;
+
+}
+
+
+}

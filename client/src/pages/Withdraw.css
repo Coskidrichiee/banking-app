@@ -1,0 +1,322 @@
+/* =========================================
+   PAGE
+========================================= */
+
+.withdraw-page{
+    min-height:100vh;
+    background:var(--bg);
+    color:var(--text);
+    padding:30px;
+    font-family:Inter,sans-serif;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.withdraw-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.page-label{
+    color:var(--primary);
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.withdraw-header h1{
+    margin-top:4px;
+    font-size:28px;
+    color:var(--text);
+}
+
+.back-btn{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    background:var(--card);
+    color:var(--primary);
+
+    border:1px solid var(--border);
+
+    font-size:22px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:var(--bg);
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.withdraw-card{
+    max-width:700px;
+
+    margin:auto;
+
+    background:var(--card);
+
+    color:var(--text);
+
+    padding:35px;
+
+    border-radius:20px;
+
+    border:1px solid var(--border);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+/* =========================================
+   BALANCE CARD
+========================================= */
+
+.balance-card{
+    background:linear-gradient(
+        135deg,
+        #071f49,
+        #0b2e6b,
+        #1d4f9d
+    );
+
+    color:#fff;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    margin-bottom:30px;
+}
+
+.balance-card span{
+    display:block;
+    opacity:.8;
+}
+
+.balance-card h2{
+    margin:10px 0;
+    font-size:34px;
+}
+
+.balance-card small{
+    opacity:.8;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin-bottom:22px;
+}
+
+.form-group label{
+    color:var(--text);
+    font-weight:600;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+    color:var(--text-secondary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    background:var(--card);
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(11,94,215,.08);
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.continue-btn{
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.continue-btn:hover{
+    opacity:.9;
+}
+
+/* =========================================
+   NOTICE
+========================================= */
+
+.withdraw-notice{
+    margin-top:35px;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+}
+
+.notice-icon{
+    width:60px;
+    height:60px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--bg);
+
+    color:var(--primary);
+
+    font-size:30px;
+
+    margin-bottom:15px;
+}
+
+.withdraw-notice h3{
+    margin-bottom:10px;
+    color:var(--text);
+}
+
+.withdraw-notice p{
+    color:var(--text-secondary);
+    line-height:1.7;
+}
+
+.withdraw-notice ul{
+    margin:20px 0;
+    padding-left:20px;
+}
+
+.withdraw-notice li{
+    color:var(--text-secondary);
+    margin-bottom:10px;
+}
+
+/* =========================================
+   NOTICE BOX
+========================================= */
+
+.notice-box{
+    background:var(--bg);
+
+    border:1px solid var(--border);
+
+    border-left:5px solid var(--primary);
+
+    border-radius:10px;
+
+    padding:18px;
+}
+
+.notice-box strong{
+    display:block;
+    margin-bottom:8px;
+    color:var(--text);
+}
+
+.notice-box p{
+    color:var(--text-secondary);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:768px){
+
+    .withdraw-page{
+        padding:15px;
+    }
+
+    .withdraw-card{
+        padding:20px;
+    }
+
+    .balance-card h2{
+        font-size:28px;
+    }
+
+    .withdraw-header h1{
+        font-size:22px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+    .withdraw-card{
+        padding:18px;
+    }
+
+    .balance-card{
+        padding:20px;
+    }
+
+    .continue-btn{
+        font-size:15px;
+    }
+}

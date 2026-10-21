@@ -1,0 +1,288 @@
+/* =========================================
+   ADMIN TOP UP PAGE
+========================================= */
+
+.admin-page {
+
+    min-height: 100vh;
+    background: #f4f7fb;
+    padding: 30px;
+    font-family: "Segoe UI", sans-serif;
+
+}
+
+
+/* HEADER */
+
+.page-header {
+
+    background: linear-gradient(
+        135deg,
+        #0d6efd,
+        #003c9e
+    );
+
+    color: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+
+    box-shadow:
+    0 10px 30px rgba(13,110,253,.25);
+
+}
+
+
+.page-header h1 {
+
+    font-size: 32px;
+    margin-bottom: 8px;
+
+}
+
+
+.page-header p {
+
+    opacity: .8;
+    font-size: 16px;
+
+}
+
+
+.header-icon {
+
+    font-size: 65px;
+
+}
+
+
+
+/* TOPUP CARDS */
+
+.topup-container {
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.topup-card {
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+
+.topup-card:hover {
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.topup-card svg {
+
+    font-size:45px;
+
+    color:#0d6efd;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.topup-card h3 {
+
+    margin-bottom:20px;
+
+    color:#1f2937;
+
+}
+
+
+
+.topup-card select,
+.topup-card input {
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+    outline:none;
+
+}
+
+
+
+.topup-card button {
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.topup-card button:hover {
+
+    background:#084298;
+
+}
+
+
+
+/* TABLE */
+
+.transaction-box {
+
+    background:white;
+
+    margin-top:35px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    overflow-x:auto;
+
+}
+
+
+
+.transaction-box h2 {
+
+    margin-bottom:20px;
+
+}
+
+
+
+table {
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+th {
+
+    background:#f1f5f9;
+
+}
+
+
+
+th,
+td {
+
+    padding:15px;
+
+    text-align:left;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+
+.success {
+
+    color:#198754;
+
+    font-weight:700;
+
+}
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+
+.admin-page {
+
+    padding:15px;
+
+}
+
+
+.page-header {
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:20px;
+
+}
+
+
+.page-header h1 {
+
+    font-size:25px;
+
+}
+
+
+.header-icon {
+
+    font-size:45px;
+
+}
+
+
+}

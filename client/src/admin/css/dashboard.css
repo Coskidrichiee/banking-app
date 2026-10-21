@@ -1,0 +1,768 @@
+/* ==========================================
+   ADMIN DASHBOARD
+========================================== */
+
+
+.admin-dashboard{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:#f5f7fb;
+
+    color:#172033;
+
+}
+
+
+
+/* ==========================================
+   MAIN AREA
+========================================== */
+
+
+.dashboard-main{
+
+    flex:1;
+
+    margin-left:280px;
+
+    min-height:100vh;
+
+    transition:.3s ease;
+
+}
+
+
+
+
+.dashboard-content{
+
+    padding:30px;
+
+}
+
+
+
+
+/* ==========================================
+   STATS GRID
+========================================== */
+
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:22px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/* ==========================================
+   QUICK ACTIONS
+========================================== */
+
+
+.quick-actions{
+
+    margin-bottom:30px;
+
+}
+
+
+
+.quick-actions h2{
+
+    font-size:20px;
+
+    margin-bottom:18px;
+
+    color:#0f172a;
+
+}
+
+
+
+.quick-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+
+.quick-card{
+
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:#334155;
+
+    font-weight:600;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:
+    0 8px 20px rgba(15,23,42,.05);
+
+    transition:.3s ease;
+
+}
+
+
+
+.quick-card svg{
+
+    font-size:30px;
+
+    color:#2563eb;
+
+}
+
+
+
+.quick-card:hover{
+
+
+    transform:
+    translateY(-6px);
+
+    box-shadow:
+    0 15px 35px rgba(15,23,42,.12);
+
+    color:#2563eb;
+
+}
+
+
+
+
+
+/* ==========================================
+   DASHBOARD GRID
+========================================== */
+
+
+.dashboard-grid{
+
+
+    display:grid;
+
+    grid-template-columns:
+    2fr 1fr;
+
+    gap:25px;
+
+
+}
+
+
+
+
+/* ==========================================
+   DASHBOARD CARD
+========================================== */
+
+
+.dashboard-card{
+
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:
+    0 8px 25px rgba(15,23,42,.06);
+
+
+}
+
+
+
+/* HEADER */
+
+
+.card-header{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.card-header h3{
+
+
+    margin:0;
+
+    font-size:18px;
+
+    color:#0f172a;
+
+
+}
+
+
+
+.card-header a{
+
+
+    text-decoration:none;
+
+    color:#2563eb;
+
+    font-size:14px;
+
+    font-weight:600;
+
+
+}
+
+
+
+
+/* ==========================================
+   TABLE
+========================================== */
+
+
+.table-responsive{
+
+    overflow-x:auto;
+
+}
+
+
+
+table{
+
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+thead{
+
+
+    background:#f8fafc;
+
+}
+
+
+
+th{
+
+
+    padding:14px;
+
+    text-align:left;
+
+    color:#64748b;
+
+    font-size:13px;
+
+    font-weight:600;
+
+
+}
+
+
+
+td{
+
+
+    padding:16px 14px;
+
+    border-bottom:
+    1px solid #eef2f7;
+
+    font-size:14px;
+
+    color:#334155;
+
+
+}
+
+
+
+tbody tr{
+
+
+    transition:.25s;
+
+
+}
+
+
+
+tbody tr:hover{
+
+
+    background:#f8fafc;
+
+
+}
+
+
+
+
+
+/* ==========================================
+   PENDING TRANSFERS
+========================================== */
+
+
+.pending-item{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:18px 0;
+
+    border-bottom:
+    1px solid #eef2f7;
+
+
+}
+
+
+
+.pending-item:last-child{
+
+    border:none;
+
+}
+
+
+
+.pending-item strong{
+
+    font-size:15px;
+
+}
+
+
+
+.pending-item p{
+
+
+    margin:5px 0;
+
+    color:#64748b;
+
+    font-size:13px;
+
+
+}
+
+
+
+.pending-item h4{
+
+
+    margin:0 0 10px;
+
+    color:#0f172a;
+
+}
+
+
+
+
+
+/* BUTTONS */
+
+
+.pending-buttons{
+
+
+    display:flex;
+
+    gap:8px;
+
+
+}
+
+
+
+.pending-buttons button{
+
+
+    border:none;
+
+    padding:8px 12px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+
+}
+
+
+
+.approve{
+
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+
+}
+
+
+
+.reject{
+
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+
+}
+
+
+
+.approve:hover{
+
+
+    background:#bbf7d0;
+
+}
+
+
+
+.reject:hover{
+
+
+    background:#fecaca;
+
+}
+
+
+
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+
+.dashboard-loading{
+
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:20px;
+
+    color:#2563eb;
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+/* ==========================================
+   LARGE TABLET
+========================================== */
+
+
+@media(max-width:1200px){
+
+
+
+.dashboard-main{
+
+    margin-left:250px;
+
+}
+
+
+
+.stats-grid{
+
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+
+}
+
+
+
+.quick-grid{
+
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+
+}
+
+
+
+.dashboard-grid{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+}
+
+
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+
+@media(max-width:992px){
+
+
+
+.dashboard-main{
+
+
+    margin-left:0;
+
+
+}
+
+
+
+.dashboard-content{
+
+
+    padding:22px;
+
+
+}
+
+
+
+
+}
+
+
+
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+
+@media(max-width:768px){
+
+
+
+.dashboard-content{
+
+
+    padding:16px;
+
+
+}
+
+
+
+.stats-grid{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.quick-grid{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.dashboard-card{
+
+
+    padding:18px;
+
+
+}
+
+
+
+.card-header{
+
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+
+}
+
+
+
+.pending-item{
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+.pending-buttons{
+
+
+    width:100%;
+
+
+}
+
+
+
+.pending-buttons button{
+
+
+    flex:1;
+
+    justify-content:center;
+
+
+}
+
+
+
+}
+
+
+
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+
+@media(max-width:480px){
+
+
+
+.quick-card{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.dashboard-card{
+
+
+    border-radius:16px;
+
+
+}
+
+
+
+td,th{
+
+
+    padding:12px 10px;
+
+    font-size:12px;
+
+
+}
+
+
+
+}

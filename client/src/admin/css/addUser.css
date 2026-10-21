@@ -1,0 +1,360 @@
+/* ==========================================
+   ADD USER PAGE
+========================================== */
+
+.add-user-page{
+    padding:30px;
+    background:#f5f7fb;
+    min-height:100vh;
+}
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.page-header h1{
+    margin:0;
+    font-size:30px;
+    color:#0f172a;
+    font-weight:700;
+}
+
+.page-header p{
+    margin-top:8px;
+    color:#64748b;
+    font-size:15px;
+}
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.back-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 20px;
+    border:none;
+    border-radius:12px;
+    background:#fff;
+    color:#2563eb;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(15,23,42,.06);
+    transition:.3s;
+}
+
+.back-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 15px 30px rgba(15,23,42,.12);
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.add-user-form{
+    background:#fff;
+    border-radius:24px;
+    padding:35px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 12px 35px rgba(15,23,42,.06);
+}
+
+/* ==========================================
+   PROFILE IMAGE
+========================================== */
+
+.profile-upload{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.profile-preview{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    overflow:hidden;
+    background:#eef4ff;
+    border:5px solid #fff;
+    box-shadow:0 10px 30px rgba(15,23,42,.12);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:65px;
+    color:#2563eb;
+}
+
+.profile-preview img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.upload-btn{
+    margin-top:20px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 22px;
+    border-radius:12px;
+    background:#2563eb;
+    color:#fff;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.upload-btn:hover{
+    background:#1d4ed8;
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.full-width{
+    grid-column:1 / -1;
+}
+
+/* ==========================================
+   FORM GROUP
+========================================== */
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    color:#334155;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* ==========================================
+   INPUT BOX
+========================================== */
+
+.input-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 18px;
+    background:#f8fafc;
+    border:1px solid #dbe2ea;
+    border-radius:14px;
+    transition:.3s;
+}
+
+.input-box svg{
+    color:#2563eb;
+    font-size:18px;
+}
+
+.input-box:focus-within{
+    border-color:#2563eb;
+    background:#fff;
+    box-shadow:0 0 0 4px rgba(37,99,235,.10);
+}
+
+.input-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    background:none;
+    font-size:15px;
+}
+
+/* ==========================================
+   SELECT
+========================================== */
+
+.form-group select{
+    padding:15px;
+    border-radius:14px;
+    border:1px solid #dbe2ea;
+    background:#f8fafc;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+.form-group select:focus{
+    border-color:#2563eb;
+    background:#fff;
+}
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.form-group small{
+    margin-top:8px;
+    color:#dc2626;
+    font-size:13px;
+    font-weight:500;
+}
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.form-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin-top:40px;
+}
+
+.cancel-btn{
+    padding:14px 25px;
+    border:none;
+    border-radius:12px;
+    background:#e5e7eb;
+    color:#334155;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.cancel-btn:hover{
+    background:#d1d5db;
+}
+
+.save-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 28px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.save-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.save-btn:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:992px){
+
+    .add-user-page{
+        padding:20px;
+    }
+
+    .add-user-form{
+        padding:25px;
+    }
+
+    .form-grid{
+        gap:20px;
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .page-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full-width{
+        grid-column:auto;
+    }
+
+    .form-actions{
+        flex-direction:column;
+    }
+
+    .cancel-btn,
+    .save-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .profile-preview{
+        width:120px;
+        height:120px;
+        font-size:55px;
+    }
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+    .add-user-page{
+        padding:15px;
+    }
+
+    .add-user-form{
+        padding:20px;
+        border-radius:18px;
+    }
+
+    .page-header h1{
+        font-size:24px;
+    }
+
+    .profile-preview{
+        width:100px;
+        height:100px;
+        font-size:45px;
+    }
+
+    .upload-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .back-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
