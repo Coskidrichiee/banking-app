@@ -4,17 +4,17 @@ require("dotenv").config();
 
 const isCloudDatabase =
     process.env.DB_HOST &&
-    process.env.DB_HOST !== "localhost" &&
-    process.env.DB_HOST !== "127.0.0.1";
+    !["localhost", "127.0.0.1", "::1"].includes(
+        process.env.DB_HOST
+    );
 
 const pool = mysql.createPool({
     host: process.env.DB_HOST || "localhost",
+    port: Number(process.env.DB_PORT || 3306),
     user: process.env.DB_USER || "root",
     password: process.env.DB_PASSWORD || "",
     database: process.env.DB_NAME || "banking_app",
-    port: Number(process.env.DB_PORT) || 3306,
 
-    // Enable SSL for Aiven
     ...(isCloudDatabase && {
         ssl: {
             rejectUnauthorized: true
@@ -58,3 +58,4 @@ const testDatabaseConnection = async () => {
 
 module.exports = pool;
 module.exports.testDatabaseConnection = testDatabaseConnection;
+
