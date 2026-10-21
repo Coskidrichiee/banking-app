@@ -1,5 +1,11 @@
+
 const mysql = require("mysql2/promise");
 require("dotenv").config();
+
+const isCloudDatabase =
+    process.env.DB_HOST &&
+    process.env.DB_HOST !== "localhost" &&
+    process.env.DB_HOST !== "127.0.0.1";
 
 const pool = mysql.createPool({
     host: process.env.DB_HOST || "localhost",
@@ -8,33 +14,45 @@ const pool = mysql.createPool({
     database: process.env.DB_NAME || "banking_app",
     port: Number(process.env.DB_PORT) || 3306,
 
+    // Enable SSL for Aiven
+    ...(isCloudDatabase && {
+        ssl: {
+            rejectUnauthorized: true
+        }
+    }),
+
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
 });
 
 const testDatabaseConnection = async () => {
+    let connection;
+
     try {
-        const connection = await pool.getConnection();
+        connection = await pool.getConnection();
+
+        const [rows] = await connection.query(
+            "SELECT DATABASE() AS databaseName"
+        );
 
         console.log("==========================================");
         console.log("DATABASE CONNECTED");
-        console.log("Database:", process.env.DB_NAME);
+        console.log("Database:", rows[0].databaseName);
         console.log("Host:", process.env.DB_HOST);
         console.log("==========================================");
 
-        connection.release();
-
         return true;
-
     } catch (error) {
-
         console.error("==========================================");
         console.error("DATABASE CONNECTION ERROR");
+        console.error("Code:", error.code);
         console.error("Message:", error.message);
         console.error("==========================================");
 
         throw error;
+    } finally {
+        if (connection) connection.release();
     }
 };
 
