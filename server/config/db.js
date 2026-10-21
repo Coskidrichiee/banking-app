@@ -1,5 +1,8 @@
 
+
 const mysql = require("mysql2/promise");
+const fs = require("fs");
+const path = require("path");
 require("dotenv").config();
 
 const isCloudDatabase =
@@ -17,7 +20,11 @@ const pool = mysql.createPool({
 
     ...(isCloudDatabase && {
         ssl: {
-            rejectUnauthorized: true
+            rejectUnauthorized: true,
+            ca: fs.readFileSync(
+                path.join(__dirname, "../certs/ca.pem"),
+                "utf8"
+            )
         }
     }),
 
@@ -58,4 +65,3 @@ const testDatabaseConnection = async () => {
 
 module.exports = pool;
 module.exports.testDatabaseConnection = testDatabaseConnection;
-
